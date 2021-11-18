@@ -4,9 +4,7 @@
 !/.yarn/releases
 !/.yarn/sdks
 
-# don't wish to use zero-installs
-# Documentation here: https://yarnpkg.com/features/zero-installs
-.yarn/cache
+# not really zero install but lets keep .yarn/cache
 /.pnp.*
 
 node_modules
