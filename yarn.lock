@@ -5,6 +5,20 @@ __metadata:
   version: 5
   cacheKey: 8
 
+"@types/lodash@npm:^4.14.177":
+  version: 4.14.177
+  resolution: "@types/lodash@npm:4.14.177"
+  checksum: 00f9eb300ed5219cfbabb3448d4a71744895edad60dcfda9f028c0808a50eb6ad1ca9f673b56a85f85668a4ea54b9870643625468a747039c435643e52253a75
+  languageName: node
+  linkType: hard
+
+"lodash@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
+  languageName: node
+  linkType: hard
+
 "monorepo@workspace:.":
   version: 0.0.0-use.local
   resolution: "monorepo@workspace:."
@@ -13,7 +27,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"typescript@npm:^4.5.2":
+"one@1.0.0, one@workspace:packages/one":
+  version: 0.0.0-use.local
+  resolution: "one@workspace:packages/one"
+  dependencies:
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
+"two@workspace:packages/two":
+  version: 0.0.0-use.local
+  resolution: "two@workspace:packages/two"
+  dependencies:
+    "@types/lodash": ^4.14.177
+    lodash: ^4.17.21
+    one: 1.0.0
+    typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
+"typescript@npm:^4.3.5, typescript@npm:^4.5.2":
   version: 4.5.2
   resolution: "typescript@npm:4.5.2"
   bin:
@@ -23,7 +56,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>, typescript@patch:typescript@^4.5.2#~builtin<compat/typescript>":
   version: 4.5.2
   resolution: "typescript@patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"
   bin:
